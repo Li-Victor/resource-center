@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -16,8 +16,7 @@ class App extends Component {
         <AppBar
           title="Title"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
-          onLeftIconButtonTouchTap={() =>
-            this.setState({ open: !this.state.open })}
+          onLeftIconButtonTouchTap={() => this.setState({ open: !this.state.open })}
         />
         <Drawer
           docked={false}
