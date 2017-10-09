@@ -1,0 +1,25 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import MenuItem from 'material-ui/MenuItem';
+
+class SideBarItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+  }
+
+  render() {
+    return (
+      <NavLink
+        activeClassName="active"
+        exact={this.props.isExact}
+        to={this.props.linkTo}
+        key={this.props.i}
+      >
+        <MenuItem primaryText={this.props.primaryText} onClick={this.props.handleClose} />
+      </NavLink>
+    );
+  }
+}
+
+export default SideBarItem;
