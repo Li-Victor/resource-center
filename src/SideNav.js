@@ -47,7 +47,7 @@ class SideNav extends React.Component {
               linkTo={link.linkTo}
               primaryText={link.text}
               handleClose={this.handleClose}
-              key={links.index}
+              key={link.index}
             />
           ))}
         </Drawer>
