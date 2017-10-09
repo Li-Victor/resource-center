@@ -7,6 +7,20 @@ import './App.css';
 import fusTheme from './fusTheme';
 import SideNav from './SideNav';
 
+// views
+import Glossary from './views/Glossary';
+import Home from './views/Home';
+import Letterhead from './views/Letterhead';
+import Logos from './views/Logos';
+import LogosPosters from './views/LogosPosters';
+import PlanningGuide from './views/PlanningGuide';
+import Posters from './views/Posters';
+import ServiceRequest from './views/ServiceRequest';
+import Services from './views/Services';
+import Story from './views/Story';
+import Tutorial from './views/Tutorial';
+import NotFound from './views/NotFound';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -21,21 +35,18 @@ class App extends Component {
             <SideNav />
 
             <Switch>
-              <Route exact path="/" render={() => <h1>Home View</h1>} />
-              <Route exact path="/logos-posters" render={() => <h1>Logos and Posters View</h1>} />
-              <Route exact path="/logos" render={() => <h1>Logos View</h1>} />
-              <Route exact path="/posters" render={() => <h1>Posters View</h1>} />
-              <Route exact path="/letterhead" render={() => <h1>Letterhead View</h1>} />
-              <Route exact path="/share-a-story" render={() => <h1>Share a Story View</h1>} />
-              <Route exact path="/planning-guide" render={() => <h1>Planning Guide View</h1>} />
-              <Route exact path="/services" render={() => <h1>Services View</h1>} />
-              <Route exact path="/glossary" render={() => <h1>Glossary View</h1>} />
-              <Route
-                exact
-                path="/service-request-form"
-                render={() => <h1>Service Request Form View</h1>}
-              />
-              <Route exact path="/tutorial" render={() => <h1>Tutorial View</h1>} />
+              <Route exact path="/" component={Home} />
+              <Route path="/logos-posters" component={LogosPosters} />
+              <Route path="/logos" component={Logos} />
+              <Route path="/posters" component={Posters} />
+              <Route path="/letterhead" component={Letterhead} />
+              <Route path="/share-a-story" component={Story} />
+              <Route path="/planning-guide" component={PlanningGuide} />
+              <Route path="/services" component={Services} />
+              <Route path="/glossary" component={Glossary} />
+              <Route path="/service-request-form" component={ServiceRequest} />
+              <Route path="/tutorial" component={Tutorial} />
+              <Route component={NotFound} />
             </Switch>
           </div>
         </MuiThemeProvider>
