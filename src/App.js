@@ -13,12 +13,12 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { open: false };
-    this.handleClose = this.handleClose.bind(this);
   }
 
-  handleClose() {
+  handleClose = () => {
     this.setState({ open: false });
-  }
+  };
+
   render() {
     return (
       <BrowserRouter>
