@@ -4,6 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import './App.css';
+import './styles/materialize-grid.css';
 import fusTheme from './fusTheme';
 import SideNav from './SideNav';
 

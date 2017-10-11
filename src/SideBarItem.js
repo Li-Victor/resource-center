@@ -12,7 +12,11 @@ class SideBarItem extends React.Component {
   render() {
     return (
       <NavLink activeClassName="active" exact={this.props.isExact} to={this.props.linkTo}>
-        <MenuItem primaryText={this.props.primaryText} onClick={this.props.handleClose} />
+        <MenuItem
+          primaryText={this.props.primaryText}
+          onClick={this.props.handleClose}
+          hoverColor="#EEE"
+        />
       </NavLink>
     );
   }
